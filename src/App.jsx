@@ -3,7 +3,11 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import LoadingPage from "./pages/LoadingPage"; // Import Loading page
-// import HomePage from "./pages/HomePage"
+import HomePage from './pages/HomePage';
+import AboutPage from "./pages/AboutPage";
+import FeaturesPage from "./pages/FeaturesPage";
+import ContactPage from "./pages/ContactPage";
+import Layout from "./components/Layout";
 
 
 function App() {
@@ -23,7 +27,13 @@ function App() {
     <>
 
     <Routes>
-      <Route path="/" element={<Navigate to="/login" />} />
+      
+    <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
     </Routes>
