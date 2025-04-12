@@ -40,18 +40,7 @@ export default function Navbar() {
     </button>
 
     {/* User Avatar */}
-    <div className="relative group">
-      <img
-        src="https://i.pravatar.cc/40"
-        alt="User Avatar"
-        className="w-8 h-8 rounded-full cursor-pointer border-2 border-white/20"
-      />
-      <div className="absolute right-0 mt-2 w-40 bg-white/10 backdrop-blur-md text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10 shadow-lg">
-        <Link to="/profile" className="block px-4 py-2 hover:bg-white/20 rounded-t-md">Profile</Link>
-        <Link to="/settings" className="block px-4 py-2 hover:bg-white/20">Settings</Link>
-        <Link to="/logout" className="block px-4 py-2 hover:bg-white/20 rounded-b-md">Logout</Link>
-      </div>
-    </div>
+
 
     {/* Login & Signup Buttons */}
     <Link
