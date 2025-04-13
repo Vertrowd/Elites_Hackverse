@@ -27,13 +27,13 @@ export default function HomePage() {
         <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Track Your Fitness Journey 💪</h2>
           <p className="text-white/80 text-lg mb-6">Stay motivated, monitor your progress, and crush your goals with FitTrack – your personal fitness companion.</p>
-          <Link to="/signup" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
+          {/* <Link to="/signup" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
             Start Tracking
-          </Link>
+          </Link> */}
 
-          {/* <Link to="/dashboard" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
+          <Link to="/dashboard" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
     Start Tracking
-        </Link> */}
+        </Link>
 
         </motion.div>
         <motion.img {...fadeInUp} src={heroImg} alt="Fitness Illustration" className="w-full md:w-1/2" />
