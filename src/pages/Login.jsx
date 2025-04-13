@@ -1,8 +1,36 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import loginImg from "../assets/login-illustration.svg"; // Use a crisp SVG/PNG
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { app } from '../../../firebaseSetup'; // Correct import of initialized Firebase app
+
+import loginImg from '../assets/login-illustration.svg';
 
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+
+    try {
+      const auth = getAuth(app);  // Correctly passing the initialized Firebase app
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log('Logged in!', user);
+      navigate('/');
+    } catch (err) {
+      setError(err.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1e3a8a] to-[#6d28d9] flex items-center justify-center px-4 py-12">
       <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden max-w-5xl w-full">
