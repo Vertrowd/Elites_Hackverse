@@ -11,6 +11,7 @@ import Layout from "./components/Layout";
 
 
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -30,6 +31,7 @@ function App() {
     <Routes>
       
     <Route element={<Layout />}>
+        
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/features" element={<FeaturesPage />} />
