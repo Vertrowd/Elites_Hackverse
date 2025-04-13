@@ -8,6 +8,9 @@ import AboutPage from "./pages/AboutPage";
 import FeaturesPage from "./pages/FeaturesPage";
 import ContactPage from "./pages/ContactPage";
 import Layout from "./components/Layout";
+import Dashboard from "./pages/Dashboard";
+
+
 
 
 function App() {
@@ -29,13 +32,16 @@ function App() {
     <Routes>
       
     <Route element={<Layout />}>
+        
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/features" element={<FeaturesPage />} />
           <Route path="/contact" element={<ContactPage />} />
-        </Route>
-      <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+        </Route>
+      
     </Routes>
     </>
   );
