@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage";
 import Layout from "./components/Layout";
 
 
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

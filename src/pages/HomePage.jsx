@@ -6,6 +6,7 @@ import heroImg from "../assets/login-illustration.svg"; // replace with your act
 import trackerImg from "../assets/cycling.svg"; // example svg/image
 import goalsImg from "../assets/girl.svg"; // example svg/image
 
+
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -27,9 +28,10 @@ export default function HomePage() {
         <motion.div {...fadeInUp} className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Track Your Fitness Journey 💪</h2>
           <p className="text-white/80 text-lg mb-6">Stay motivated, monitor your progress, and crush your goals with FitTrack – your personal fitness companion.</p>
-          <Link to="/signup" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
-            Start Tracking
-          </Link>
+          <Link to="/dashboard" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 px-6 py-3 rounded-md text-lg font-medium transition">
+         Start Tracking
+    </Link>
+
         </motion.div>
         <motion.img {...fadeInUp} src={heroImg} alt="Fitness Illustration" className="w-full md:w-1/2" />
       </section>
